@@ -1,17 +1,174 @@
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    >
+    <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML Form</title>
     <link rel="stylesheet" href="./style.css">
   </head>
+
   <body>
-    <h1>HTML Form</h1>
+    <form action="http://localhost:3000/api" method="post" autocomplete="off">
+      <fieldset>
+        <legend>Personal information</legend>
+        <label class="form-field">
+          Surname:
+
+          <input
+            type="text"
+            name="surname"
+            autocomplete="off"
+            required
+          >
+        </label>
+
+        <label class="form-field">
+          Name:
+
+          <input
+            type="text"
+            name="name"
+            autocomplete="off"
+            required
+          >
+        </label>
+
+        <label class="form-field">
+          How old are You?
+
+          <input
+            type="number"
+            name="age"
+            value="12"
+            min="1"
+            max="100"
+            autocomplete="off"
+          >
+        </label>
+
+        <label class="form-field">
+          Full date of birth:
+
+          <input type="date" name="date" autocomplete="off">
+        </label>
+
+        <label class="form-field">
+          I accept the term of the agreement
+
+          <input
+            type="checkbox"
+            name="terms"
+            autocomplete="off"
+            required
+          >
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Registration</legend>
+        <label class="form-field">
+          E-mail:
+
+          <input
+            type="email"
+            name="E-mail"
+            placeholder="email@example.com"
+            autocomplete="off"
+            required
+          >
+        </label>
+
+        <label class="form-field">
+          Password:
+
+          <input
+            type="password"
+            name="Password"
+            autocomplete="off"
+            minlength="5"
+            required
+          >
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>An interesting fact about you!</legend>
+        Do you love cats?
+
+        <label>
+          <input
+            type="radio"
+            name="Choice"
+            value="y"
+            autocomplete="off"
+          >
+
+          Yes
+        </label>
+
+        <label>
+          <input
+            class="no"
+            type="radio"
+            name="Choice"
+            value="n"
+            autocomplete="off"
+          >
+
+          No
+        </label>
+
+        <label class="form-field">
+          What is your favorite color?
+
+          <input type="color" name="color">
+        </label>
+
+        <label class="form-field">
+          What time do you go to bed?
+
+          <input type="time" name="bed" autocomplete="off">
+        </label>
+
+        <label class="form-field">
+          What are your favorite brand of cars?
+
+          <select name="car" multiple>
+            <option value="BMW">BMW</option>
+            <option value="Audi">Audi</option>
+            <option value="Lada">Lada</option>
+          </select>
+        </label>
+
+        <label class="form-field">
+          How do you rate our work?
+
+          <input type="range" name="satisfaction">
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional info:</legend>
+        <label class="form-field">
+          Comments:
+
+          <textarea name="Comments" maxlength="500"></textarea>
+        </label>
+
+        <label class="form-field">
+          Would you recommend us?
+
+          <select name="recommend">
+            <option value="y">yes</option>
+            <option value="n">no</option>
+          </select>
+        </label>
+      </fieldset>
+    </form>
+    <button type="submit">Submit</button>
     <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
